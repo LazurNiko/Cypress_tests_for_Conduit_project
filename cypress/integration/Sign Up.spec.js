@@ -23,12 +23,4 @@ describe('Sign Up', () => {
         .click();
       });
   
-      
-  
-  
-    
-  
-    
-  
-    
   })

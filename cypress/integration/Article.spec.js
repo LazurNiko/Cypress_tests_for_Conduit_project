@@ -34,16 +34,16 @@ beforeEach(() => {
             .click();
         cy.contains('h1', 'fdg').click()
         cy.url()
-          .should('include', '#/article/fdg-1989');
+          .should('include', '#/article/fdg-2283');
         cy.contains('.author', 'niko');
         cy.contains('h1', 'fdg');
         cy.contains('.col-xs-12', 'My contains lorem ipsum article body');
-        cy.contains('[href="#/editor/fdg-1989"]', 'Edit Article')
+        cy.contains('[href="#/editor/fdg-2283"]', 'Edit Article')
           .click();
         cy.url()
-        .should('include', '#/editor/fdg-1989');
+        .should('include', '#/editor/fdg-2283');
         cy.url()
-          .should('include', '#/editor/fdg-1989'); 
+          .should('include', '#/editor/fdg-2283'); 
         cy.get('[placeholder="Article Title"]')
           .clear();
         cy.get('[placeholder="Article Title"]')
@@ -59,8 +59,8 @@ beforeEach(() => {
         cy.contains('.btn', 'Publish Article')
           .click();
         cy.url()
-          .should('include', '#/article/fdg-1989')  
-        cy.contains('[href="#/editor/fdg-1989"]', 'Edit Article')
+          .should('include', '#/article/fdg-2283')  
+        cy.contains('[href="#/editor/fdg-2283"]', 'Edit Article')
           .click();
         cy.get('[placeholder="Article Title"]')
           .clear();
@@ -77,7 +77,7 @@ beforeEach(() => {
         cy.contains('.btn', 'Publish Article')
           .click();
         cy.url()
-          .should('include', '/#/article/fdg-1989'); 
+          .should('include', '/#/article/fdg-2283'); 
       });
     
       it('User should be able to delete article', () => {

@@ -1,4 +1,4 @@
-// Cypress.Commands.add('login', (email = 'niko@mail.com', password = '123456Qwert!') => {
+// Cypress.Commands.add('login', (email = 'niko@mail.com', password = '12345Qwert!') => {
 //     cy.visit('/login');
 //     cy.get('[placeholder="Email"]')
 //       .type(email);
@@ -9,7 +9,7 @@
 //   });
 
 
-Cypress.Commands.add('login', (email = 'niko@mail.com', password = '12345Qwert!') => {
+Cypress.Commands.add('login', (email = 'niko12@mail.com', password = '12345Qwert!') => {
     cy.request({
         method: "POST",
         url: "https://api.realworld.io/api/users/login",
