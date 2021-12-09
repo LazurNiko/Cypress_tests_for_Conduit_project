@@ -1,8 +1,16 @@
 {
-    "baseUrl": "https://react-redux.realworld.io",
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "mochaFile": "results/my-test-output.xml",
-        "toConsole": true
-      }
+  "baseUrl": "https://react-redux.realworld.io",
+  "reporterOptions": {
+    "reportDir": "integration-reports/integration/reports/mocha",
+    "quiet": true,
+    "html": false,
+    "overwrite": false,
+    "json": true
+  },
+  "videosFolder": "integration-reports/integration/public/videos",
+  "screenshotsFolder": "integration-reports/integration/public/screenshots",
+  "videoCompression": false,
+  "reporter": "mochawesome",
+  "browser": "electron",
+  "chromeWebSecurity": false
 }

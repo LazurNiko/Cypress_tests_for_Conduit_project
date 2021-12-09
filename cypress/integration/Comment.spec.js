@@ -33,10 +33,10 @@ describe('Comment', () => {
     cy.get('.col-xs-12>div>p')
       .should('contain', 'Over 100 implementations have been created using various languages, libraries, and frameworks.')
       .and('contain', 'Explore them on CodebaseShow.');
-    cy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 06 2021')
+    cy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 09 2021')
     cy.get(':nth-child(2) > .card-footer > .mod-options > .ion-trash-a')
       .click();
-    cy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 06 2021')
+    cy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 09 2021')
       .should('not.exist') 
   });
 });

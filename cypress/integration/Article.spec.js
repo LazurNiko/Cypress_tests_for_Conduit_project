@@ -65,7 +65,7 @@ describe('Creating, editing, deleting article', () => {
       cy.get('[placeholder="Article Title"]')
         .clear();
       cy.get('[placeholder="Article Title"]')
-        .type('fdg1');
+        .type('fdg');
       cy.get(`[placeholder="What's this article about?"]`)
         .clear();
       cy.get(`[placeholder="What's this article about?"]`)

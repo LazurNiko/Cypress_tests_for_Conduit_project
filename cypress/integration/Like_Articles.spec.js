@@ -13,10 +13,10 @@ describe('', () => {
       .should('contain', 'Wed Nov 24 2021');
 
     cy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')
-      .should('contain', '208')
+      .should('contain', '271')
       .click();
     cy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')
-      .should('contain', '209');
+      .should('contain', '272');
     cy.get(':nth-child(4) > .nav-link')
       .should('contain','niko')
       .click();
@@ -29,10 +29,10 @@ describe('', () => {
   it('User should be able to "unlike" the article', () => {
 
     cy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')
-      .should('contain', '209')
+      .should('contain', '272')
       .click();
     cy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')
-      .should('contain', '208');
+      .should('contain', '271');
       cy.get(':nth-child(4) > .nav-link').should('contain','niko')
       .click();
     cy.get('[href="#@niko/favorites"]') 

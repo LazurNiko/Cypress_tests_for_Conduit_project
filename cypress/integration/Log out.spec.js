@@ -1,8 +1,7 @@
 import LogOut from './pageObj/logout'
 
 describe('Log out', () => {
-
-const logout = new LogOut()
+    const logout = new LogOut()
 
     before(() => {
         cy.login();
