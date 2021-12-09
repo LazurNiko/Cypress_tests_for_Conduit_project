@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-09T21:43:06.633Z",
+    "end": "2021-12-09T21:43:19.071Z",
+    "duration": 12438,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3226d3c7-fc8f-4ad5-acf4-06266c8d8b37",
+      "title": "",
+      "fullFile": "cypress/integration/Profile_Settings.spec.js",
+      "file": "cypress/integration/Profile_Settings.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7905208a-c3ed-4b14-9319-68f6b4f5c6d1",
+          "title": "Settings",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should have an ability to edit the email and password in profile settings",
+              "fullTitle": "Settings User should have an ability to edit the email and password in profile settings",
+              "timedOut": null,
+              "duration": 4507,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"#settings\"]')\n    .click();\ncy.url()\n    .should('include', '/settings');\ncy.get('[placeholder=\"Short bio about you\"]')\n    .clear()\n    .type('My edited bio');\ncy.get('[placeholder=\"Email\"]')\n    .clear()\n    .type('niko1@mail.com');\ncy.get('[placeholder=\"New Password\"]')\n    .clear()\n    .type('123456Qwert!');\ncy.contains('.btn', 'Update Settings')\n    .click();\ncy.get('[placeholder=\"Email\"]')\n    .clear()\n    .type('niko@mail.com');\ncy.get('[placeholder=\"Username\"]')\n    .clear()\n    .type('12345Qwert!');\ncy.get('.btn-lg')\n    .click();",
+              "err": {},
+              "uuid": "84e18258-ebe2-4172-888c-f83ddc10b3bb",
+              "parentUUID": "7905208a-c3ed-4b14-9319-68f6b4f5c6d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should have an ability to change username",
+              "fullTitle": "Settings User should have an ability to change username",
+              "timedOut": null,
+              "duration": 2835,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"#settings\"]')\n    .click();\ncy.url()\n    .should('include', '/settings');\ncy.get('[placeholder=\"Username\"]')\n    .clear()\n    .type('NikoUser');\ncy.get('.btn-lg')\n    .click();\ncy.get('[placeholder=\"Username\"]')\n    .clear()\n    .type('niko');\ncy.get('.btn-lg')\n    .click();",
+              "err": {},
+              "uuid": "68a85933-6594-4c98-8146-7fcf97b007fa",
+              "parentUUID": "7905208a-c3ed-4b14-9319-68f6b4f5c6d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should have an ability to add the image in profile settings",
+              "fullTitle": "Settings User should have an ability to add the image in profile settings",
+              "timedOut": null,
+              "duration": 4973,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"#settings\"]')\n    .click();\ncy.url()\n    .should('include', '/settings');\ncy.get('[placeholder=\"URL of profile picture\"]')\n    .clear()\n    .type('https://static3.depositphotos.com/1000627/109/i/600/depositphotos_1095588-stock-photo-green-eyed-cat.jpg');\ncy.get('.btn-lg')\n    .click();",
+              "err": {},
+              "uuid": "67778ceb-a440-4b61-89ee-273f3b3f1be2",
+              "parentUUID": "7905208a-c3ed-4b14-9319-68f6b4f5c6d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "84e18258-ebe2-4172-888c-f83ddc10b3bb",
+            "68a85933-6594-4c98-8146-7fcf97b007fa",
+            "67778ceb-a440-4b61-89ee-273f3b3f1be2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12315,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

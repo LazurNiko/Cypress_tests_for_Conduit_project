@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-09T21:43:21.792Z",
+    "end": "2021-12-09T21:43:24.401Z",
+    "duration": 2609,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8b006488-97bd-4777-827b-828b9b6d54e0",
+      "title": "",
+      "fullFile": "cypress/integration/Sign Up.spec.js",
+      "file": "cypress/integration/Sign Up.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c80f39d3-ce04-4a12-9512-bc84156ac4c4",
+          "title": "Sign Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should have an ability to create a new account",
+              "fullTitle": "Sign Up User should have an ability to create a new account",
+              "timedOut": null,
+              "duration": 2583,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('[href=\"#register\"]')\n    .click();\ncy.url().should('include', '/register');\ncy.get('[placeholder=\"Username\"]')\n    .type(user.username);\ncy.get('[placeholder=\"Email\"]')\n    .type(user.email);\ncy.get('[placeholder=\"Password\"]')\n    .type(user.password);\ncy.get('.btn')\n    .click();",
+              "err": {},
+              "uuid": "4afb6684-bd92-4e57-8c5e-6ddb13cf047d",
+              "parentUUID": "c80f39d3-ce04-4a12-9512-bc84156ac4c4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4afb6684-bd92-4e57-8c5e-6ddb13cf047d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2583,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-09T21:42:05.930Z",
+    "end": "2021-12-09T21:42:19.183Z",
+    "duration": 13253,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96f8f02b-95d3-4364-b1d8-c7a67a3f1a57",
+      "title": "",
+      "fullFile": "cypress/integration/Comment.spec.js",
+      "file": "cypress/integration/Comment.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a414a08-6070-4b38-b26c-16e5d67cfefa",
+          "title": "Comment",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User be able to post comments",
+              "fullTitle": "Comment User be able to post comments",
+              "timedOut": null,
+              "duration": 5525,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.author')\n    .should('contain', 'Gerome');\ncy.get('h1')\n    .contains('Explore implementations')\n    .click();\ncy.url().should('include', '/Explore-implementations');\ncy.get('.col-xs-12>div>p')\n    .should('contain', 'Over 100 implementations have been created using various languages, libraries, and frameworks.')\n    .and('contain', 'Explore them on CodebaseShow.');\ncy.get('.form-control')\n    .type('This is the comment!');\ncy.contains('.btn', 'Post Comment')\n    .click();",
+              "err": {},
+              "uuid": "e6f75fa7-fe67-4e98-9a9f-974ac90e9d34",
+              "parentUUID": "5a414a08-6070-4b38-b26c-16e5d67cfefa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User be able to delete the comment",
+              "fullTitle": "Comment User be able to delete the comment",
+              "timedOut": null,
+              "duration": 7571,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.author')\n    .should('contain', 'Gerome');\ncy.get('h1')\n    .contains('Explore implementations')\n    .click();\ncy.url().should('include', '/Explore-implementations');\ncy.get('.col-xs-12>div>p')\n    .should('contain', 'Over 100 implementations have been created using various languages, libraries, and frameworks.')\n    .and('contain', 'Explore them on CodebaseShow.');\ncy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 09 2021');\ncy.get(':nth-child(2) > .card-footer > .mod-options > .ion-trash-a')\n    .click();\ncy.contains('.card-text', 'This is the comment!', '.date-posted', 'Mon Dec 09 2021')\n    .should('not.exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected not to find content: 'This is the comment!' within the selector: '.card-text' but continuously found it.",
+                "estack": "AssertionError: Timed out retrying: Expected not to find content: 'This is the comment!' within the selector: '.card-text' but continuously found it.\n    at Context.eval (https://react-redux.realworld.io/__cypress/tests?p=cypress/integration/Comment.spec.js:38:14)",
+                "diff": null
+              },
+              "uuid": "ca906900-cb3f-4012-ab16-eedc747b322e",
+              "parentUUID": "5a414a08-6070-4b38-b26c-16e5d67cfefa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e6f75fa7-fe67-4e98-9a9f-974ac90e9d34"
+          ],
+          "failures": [
+            "ca906900-cb3f-4012-ab16-eedc747b322e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

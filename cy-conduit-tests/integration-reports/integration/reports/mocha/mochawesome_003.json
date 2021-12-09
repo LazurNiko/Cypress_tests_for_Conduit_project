@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-09T21:42:34.463Z",
+    "end": "2021-12-09T21:42:46.892Z",
+    "duration": 12429,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c9eeedd-1e75-425f-8c33-b6043044cdcb",
+      "title": "",
+      "fullFile": "cypress/integration/Like_Articles.spec.js",
+      "file": "cypress/integration/Like_Articles.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e219fc76-dfe6-4e35-96ff-913ff8e4bb83",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should be able to \"like\" the articles",
+              "fullTitle": " User should be able to \"like\" the articles",
+              "timedOut": null,
+              "duration": 7641,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.info')\n    .should('contain', 'Wed Nov 24 2021');\ncy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')\n    .should('contain', '271')\n    .click();\ncy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')\n    .should('contain', '272');\ncy.get(':nth-child(4) > .nav-link')\n    .should('contain', 'niko')\n    .click();\ncy.get('[href=\"#@niko/favorites\"]')\n    .click();\ncy.contains('.article-preview', 'Gerome')\n    .should('exist');",
+              "err": {},
+              "uuid": "cd64e25f-03d3-40a0-aa09-a1fa9a9ddcbc",
+              "parentUUID": "e219fc76-dfe6-4e35-96ff-913ff8e4bb83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should be able to \"unlike\" the article",
+              "fullTitle": " User should be able to \"unlike\" the article",
+              "timedOut": null,
+              "duration": 4530,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')\n    .should('contain', '272')\n    .click();\ncy.get(':nth-child(3) > .article-meta > .pull-xs-right > .btn')\n    .should('contain', '271');\ncy.get(':nth-child(4) > .nav-link').should('contain', 'niko')\n    .click();\ncy.get('[href=\"#@niko/favorites\"]')\n    .click();\ncy.contains('.article-preview', 'Gerome')\n    .should('not.exist');",
+              "err": {},
+              "uuid": "a554f158-08af-43f4-bd20-7ab8413b2162",
+              "parentUUID": "e219fc76-dfe6-4e35-96ff-913ff8e4bb83",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cd64e25f-03d3-40a0-aa09-a1fa9a9ddcbc",
+            "a554f158-08af-43f4-bd20-7ab8413b2162"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12171,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

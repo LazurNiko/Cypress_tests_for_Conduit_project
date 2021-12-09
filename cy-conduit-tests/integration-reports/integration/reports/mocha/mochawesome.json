@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-09T21:41:44.270Z",
+    "end": "2021-12-09T21:42:03.187Z",
+    "duration": 18917,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "205db952-3b9b-4850-bb46-0a5c8b717c1f",
+      "title": "",
+      "fullFile": "cypress/integration/Article.spec.js",
+      "file": "cypress/integration/Article.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9bc22150-21e2-42ca-b754-6af364b57e70",
+          "title": "Creating, editing, deleting article",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should have an ability to create new article",
+              "fullTitle": "Creating, editing, deleting article User should have an ability to create new article",
+              "timedOut": null,
+              "duration": 6142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"#editor\"]')\n    .click();\ncy.url()\n    .should('include', 'editor');\ncy.get('[placeholder=\"Article Title\"]')\n    .type(article.title);\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .type(article.description);\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .type(article.body);\ncy.contains('.btn', 'Publish Article')\n    .click();",
+              "err": {},
+              "uuid": "d22e38de-7daf-41f6-bf74-9b2351355710",
+              "parentUUID": "9bc22150-21e2-42ca-b754-6af364b57e70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User be able to edit own created Article",
+              "fullTitle": "Creating, editing, deleting article User be able to edit own created Article",
+              "timedOut": null,
+              "duration": 8493,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains('.nav-link', 'Global Feed')\n    .click();\ncy.contains('h1', 'fdg').click();\ncy.url()\n    .should('include', '#/article/fdg-2283');\ncy.contains('.author', 'niko');\ncy.contains('h1', 'fdg');\ncy.contains('.col-xs-12', 'My contains lorem ipsum article body');\ncy.contains('[href=\"#/editor/fdg-2283\"]', 'Edit Article')\n    .click();\ncy.url()\n    .should('include', '#/editor/fdg-2283');\ncy.url()\n    .should('include', '#/editor/fdg-2283');\ncy.get('[placeholder=\"Article Title\"]')\n    .clear();\ncy.get('[placeholder=\"Article Title\"]')\n    .type('My new');\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .clear();\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .type('About');\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .clear();\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .type('Whatever');\ncy.contains('.btn', 'Publish Article')\n    .click();\ncy.url()\n    .should('include', '#/article/fdg-2283');\ncy.contains('[href=\"#/editor/fdg-2283\"]', 'Edit Article')\n    .click();\ncy.get('[placeholder=\"Article Title\"]')\n    .clear({ timeout: 3000 });\ncy.get('[placeholder=\"Article Title\"]')\n    .type('fdg');\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .clear();\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .type('My contains lorem ipsum article body');\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .clear({ timeout: 3000 });\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .type('My contains lorem ipsum article body');\ncy.contains('.btn', 'Publish Article')\n    .click();\ncy.url()\n    .should('include', '/#/article/fdg-2283');",
+              "err": {},
+              "uuid": "30a757a8-5939-41ad-ab9d-c1811149a5af",
+              "parentUUID": "9bc22150-21e2-42ca-b754-6af364b57e70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should be able to delete article",
+              "fullTitle": "Creating, editing, deleting article User should be able to delete article",
+              "timedOut": null,
+              "duration": 4162,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"#editor\"]')\n    .click();\ncy.url()\n    .should('include', 'editor');\ncy.get('[placeholder=\"Article Title\"]')\n    .type('My best Article');\ncy.get(\"[placeholder=\\\"What's this article about?\\\"]\")\n    .type('Article');\ncy.get('[placeholder=\"Write your article (in markdown)\"]')\n    .type('My new article is created');\ncy.contains('.btn', 'Publish Article')\n    .click();\ncy.get('.btn.btn-outline-danger.btn-sm')\n    .click();\ncy.url().\n    should('include', '/');\ncy.get('[href=\"#/articles/my-best-Article\"]')\n    .should('not.exist');",
+              "err": {},
+              "uuid": "c208c235-ad78-48e3-bea9-04f2a22465f8",
+              "parentUUID": "9bc22150-21e2-42ca-b754-6af364b57e70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d22e38de-7daf-41f6-bf74-9b2351355710",
+            "30a757a8-5939-41ad-ab9d-c1811149a5af",
+            "c208c235-ad78-48e3-bea9-04f2a22465f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18797,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
