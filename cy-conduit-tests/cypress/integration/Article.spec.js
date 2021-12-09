@@ -45,7 +45,7 @@ describe('Creating, editing, deleting article', () => {
       cy.url()
         .should('include', '#/editor/fdg-2283'); 
       cy.get('[placeholder="Article Title"]')
-        .clear();
+        .clear({timeout: 3000});
       cy.get('[placeholder="Article Title"]')
         .type('My new');
       cy.get(`[placeholder="What's this article about?"]`)
