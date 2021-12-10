@@ -1,1 +1,11 @@
 node_modules
+.angular/
+.DS_Store
+*.log
+node_modules/
+mochawesome-report*/
+nginx/
+src/
+.browserslistrc
+tsconfig.
+.edutorconfig
