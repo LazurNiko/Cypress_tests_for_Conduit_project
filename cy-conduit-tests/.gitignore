@@ -7,5 +7,5 @@ mochawesome-report*/
 nginx/
 src/
 .browserslistrc
-tsconfig.
+*tsconfig.
 .edutorconfig
